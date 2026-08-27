@@ -79,9 +79,10 @@ tests/
   `MAX_HIERARCHY_CHILD_UNIQUE` beyond the one real dataset that surfaced
   the bugs they fix.
 
-## No git repository
+## Git
 
-This project has no `.git` yet, so there's no diff/rollback safety net and
-no commit history - `CHANGELOG.md` is the only record of intent. Strongly
-consider running `git init` and committing the current state before further
-changes, so future edits are diffable and revertible.
+This project is now a git repository. `CHANGELOG.md` is still the primary
+record of *intent* behind each change (symptom/root cause/fix), while git
+provides the diff/rollback safety net. Keep updating `CHANGELOG.md` on every
+change as described above - the commit log complements it, it doesn't
+replace it.

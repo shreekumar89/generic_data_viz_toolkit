@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Data Visualization Team"}
+    {name = "Shree"}
 ]
 keywords = ["data", "visualization", "analytics", "EDA", "data quality", "insights", "dashboard"]
 classifiers = [

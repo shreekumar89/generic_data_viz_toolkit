@@ -5,9 +5,32 @@ Newest entries first. Each entry names the files touched and the specific
 bugs fixed, so a later session can tell *why* something looks the way it
 does before changing it again.
 
-There is no git history backing this (see "Recommendation" at the bottom
-of this file), so this document is currently the only record of intent
-behind the code. Keep it updated when you make further changes.
+This document records the *intent* behind each change (symptom / root
+cause / fix / files touched). The project is now under git, so the commit
+log provides diffs and rollback - but keep this file updated on every
+change, since a diff rarely explains *why*.
+
+---
+
+## 11. Publishing prep (public GitHub release)
+
+**Context:** repository is being pushed to GitHub as a public,
+open-source project. No toolkit behavior changed in this entry.
+
+**Changes:**
+- Added `LICENSE` (MIT). `pyproject.toml` and `README.md` already
+  declared MIT but no license file existed; public users expect one.
+- `pyproject.toml`: replaced the placeholder author
+  `"Data Visualization Team"` with a real author name.
+- `run_analysis.py`: removed hardcoded local absolute Windows paths
+  (`C:\Users\shree\...`); it now takes an optional data-file path and
+  output dir as command-line arguments and falls back to editable
+  defaults, with an existence check on the input file.
+- `CLAUDE.md` / `CHANGELOG.md`: updated the now-inaccurate "no git
+  repository" notes - the project is under git.
+
+**Files touched:** `LICENSE` (new), `pyproject.toml`, `run_analysis.py`,
+`CLAUDE.md`, `CHANGELOG.md`.
 
 ---
 
@@ -352,5 +375,5 @@ unaddressed, see "Known open items" below**).
   interactive; add `--static` to opt out.
 - Test suite: `python -m unittest discover -s tests -v` (64 tests as of
   entry 10, all passing). Run this before and after any change.
-- No git repository yet - see recommendation in the handoff message this
-  changelog was created alongside.
+- Project is under git as of entry 11; the test suite command above is
+  still the pre/post-change gate.
