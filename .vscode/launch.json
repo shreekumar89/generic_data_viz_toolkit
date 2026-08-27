@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Data Viz: run_analysis.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_analysis.py",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Data Viz: CLI (edit args below)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "generic_data_viz",
+      "args": ["--input", "your_data.csv", "--output", "./my_results", "--interactive", "--engine", "plotly"],
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generic-data-viz"
+version = "1.0.0"
+description = "A domain-agnostic, automated data visualization and analysis toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Data Visualization Team"}
+]
+keywords = ["data", "visualization", "analytics", "EDA", "data quality", "insights", "dashboard"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+dependencies = [
+    "pandas>=1.3.0",
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.4.0",
+    "seaborn>=0.11.0",
+    "openpyxl>=3.0.0",
+    "plotly>=5.0.0",
+]
+
+[project.optional-dependencies]
+# Plotly (the interactive charting engine used by default) is now a core
+# dependency, not optional - see `dependencies` above. This extra is for
+# additional, not-yet-wired-in visualization libraries.
+full = [
+    "altair>=4.0.0",
+    "squarify>=0.4.3",
+]
+
+[project.scripts]
+data-viz = "generic_data_viz.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["generic_data_viz*"]

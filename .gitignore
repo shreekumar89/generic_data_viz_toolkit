@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# Generated report output (regenerable by running the toolkit - see README/CLAUDE.md)
+test_output/
+example_output/
+Output Analysis/
+my_results/
+results/
+
+# Personal/sample data files dropped in the repo root for local testing -
+# not part of the toolkit itself. Untrack; add back with `git add -f` if
+# you want a specific dataset version-controlled.
+*.xlsx
+*.xls
+
+# Editor/OS cruft
+.DS_Store
+Thumbs.db
