@@ -242,7 +242,6 @@ GENERIC DATA VISUALIZATION ACCELERATOR
   📊 MEASURES (3):
      • Article Weight (409 unique, 90% conf)
      • Article Price (Euro) (56 unique, 90% conf)
-     • ECO_SCORE (3,506 unique, 90% conf)
 
   🏷️  DIMENSIONS (10):
      • Brand (4 unique, 90% conf)
